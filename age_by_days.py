@@ -1,4 +1,4 @@
-# Code : Ilyes
+# Coder : Ilyes CH
 def isLeapYear(year):
     if year % 400 == 0:
         return True
