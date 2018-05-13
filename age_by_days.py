@@ -19,7 +19,6 @@ def daysInMonth(year, month):
                 return 28
     return 30
 def nextDay(year, month, day):
-    """Simple version: assume every month has 30 days"""
     if day < daysInMonth(year, month):
         return year, month, day + 1
     else:
