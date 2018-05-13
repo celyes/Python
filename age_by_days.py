@@ -1,10 +1,4 @@
-# Define a daysBetweenDates procedure that would produce the
-# correct output if there was a correct nextDay procedure.
-#
-# Note that this will NOT produce correct outputs yet, since
-# our nextDay procedure assumes all months have 30 days
-# (hence a year is 360 days, instead of 365).
-#
+# Code : Ilyes
 def isLeapYear(year):
     if year % 400 == 0:
         return True
@@ -53,6 +47,8 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
 
 print daysBetweenDates(2012, 1, 1, 2013, 1, 1)
 
+# function to test the code with 3 different examples
+
 def test():
     test_cases = [((2012, 9, 30, 2012, 10, 30), 30),
                   ((2012, 1, 1, 2013, 1, 1), 366),
@@ -64,8 +60,6 @@ def test():
             print "Test with data:", args, "failed"
         else:
             print "Test case passed!"
-
-
 test()
 
 
