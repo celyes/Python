@@ -1,4 +1,4 @@
-# Coder : Ilyes CH
+# function to detect if a year is a leap year indeed or not
 def isLeapYear(year):
     if year % 400 == 0:
         return True
@@ -8,6 +8,7 @@ def isLeapYear(year):
         return True
     return False
 
+# function to return the number of days in each month
 def daysInMonth(year, month):
     if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12 :
         return 31
@@ -26,6 +27,7 @@ def nextDay(year, month, day):
             return year + 1, 1, 1
         else:
             return year, month + 1, 1
+        
 # Helper procedure
 def dateIsBefore(year1, month1, day1, year2, month2, day2):
     if year1 < year2:
@@ -37,6 +39,7 @@ def dateIsBefore(year1, month1, day1, year2, month2, day2):
             return day1 < day2
     return False
 
+# This is the main function 
 def daysBetweenDates(year1, month1, day1, year2, month2, day2):
     days = 0
     while dateIsBefore(year1, month1, day1, year2, month2, day2):
@@ -46,7 +49,8 @@ def daysBetweenDates(year1, month1, day1, year2, month2, day2):
 
 print daysBetweenDates(2012, 1, 1, 2013, 1, 1)
 
-# function to test the code with 3 different examples
+# additional function to test the code with 3 different examples
+# you can remove the code below and the script will continue to work just fine
 
 def test():
     test_cases = [((2012, 9, 30, 2012, 10, 30), 30),
